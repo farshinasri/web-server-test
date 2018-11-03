@@ -39,10 +39,10 @@ res.send({
 
 });
 
-
+var ua='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36'
 app.get('/bbcp',(req,res)=>{
 request({url:"http://www.bbc.com/persian",json:false,headers: {
-    'User-Agent': 'Chrome'
+    'User-Agent': ua
   }},(error,response,body)=>{
     res.send(body);
     
