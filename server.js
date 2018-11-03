@@ -4,7 +4,7 @@ const hbs=require('hbs');
 const fs=require('fs');
 var app=express();
 hbs.registerPartials(__dirname + "/views/partials");
-
+const port=process.env.PORT || 3000;
 app.set('view engine',hbs);
 
 app.use((req,res,next)=>{
@@ -41,10 +41,10 @@ res.send({
 
 
 app.get('/bbcp',(req,res)=>{
-request({url:"http://www.bbcpersian.com",json:false},(error,response,body)=>{
+request({url:"http://www.cnn.com",json:false},(error,response,body)=>{
     res.send(body);
-    
+    console.log(body);
 })
 
 });
-app.listen(3000,()=>{console.log('start at port 3000')});
+app.listen(port,()=>{console.log('start at port ' + port)});
