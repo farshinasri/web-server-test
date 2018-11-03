@@ -41,10 +41,12 @@ res.send({
 
 
 app.get('/bbcp',(req,res)=>{
-request({url:"http://www.bbc.com/persian",json:false},(error,response,body)=>{
+request({url:"http://www.bbc.com/persian",json:false,headers: {
+    'User-Agent': 'Chrome'
+  }},(error,response,body)=>{
     res.send(body);
-    console.log(body);
-})
+    
+    })
 
 });
 app.listen(port,()=>{console.log('start at port ' + port)});
