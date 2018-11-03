@@ -41,7 +41,7 @@ res.send({
 
 
 app.get('/bbcp',(req,res)=>{
-request({url:"http://www.bbc.com",json:false},(error,response,body)=>{
+request({url:"http://www.bbc.com/persian",json:false},(error,response,body)=>{
     res.send(body);
     console.log(body);
 })
