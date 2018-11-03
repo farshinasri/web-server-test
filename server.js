@@ -33,15 +33,15 @@ res.render('about.hbs',{
 
 app.get("/bad",(req,res)=>{
 res.send({
-    error : 'error accured',
+    error : 'error error error ',
     errorNumber:312
 })
 
 });
 
 
-app.get('/google',(req,res)=>{
-request({url:"http://www.facebook.com",json:false},(error,response,body)=>{
+app.get('/bbcp',(req,res)=>{
+request({url:"http://www.bbcpersian.com",json:false},(error,response,body)=>{
     res.send(body);
     
 })
